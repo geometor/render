@@ -1,6 +1,8 @@
 render
 ======
 
+greetinsg
+
 .. include:: intro.rst
 
 recent logs:
