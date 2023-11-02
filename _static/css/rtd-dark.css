@@ -20,8 +20,13 @@
   }
 
   .wy-nav-content {
-    background: #3c3c3c;
+    background: #222;
     color: aliceblue;
+  }
+
+  .wy-nav-side {
+    background: #111;
+    /* color: aliceblue; */
   }
 
   .method dt, .class dt, .data dt, .attribute dt, .function dt,
@@ -40,7 +45,8 @@
   }
 
   .wy-nav-content-wrap {
-    background-color: rgba(0, 0, 0, 0.6) !important;
+    /* background-color: rgba(0, 0, 0, 0.6) !important; */
+    background-color: #000 !important;
   }
 
   .sidebar {
