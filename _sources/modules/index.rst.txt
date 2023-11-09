@@ -7,12 +7,12 @@ modules
    :undoc-members:
    :show-inheritance:
 
-.. automodule:: geometor.render.plotter
+.. automodule:: geometor.render.plotter.plotter
    :members:
    :undoc-members:
    :show-inheritance:
 
-.. automodule:: geometor.render.sequencer
+.. automodule:: geometor.render.sequencer.sequencer
    :members:
    :undoc-members:
    :show-inheritance:
