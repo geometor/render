@@ -1,60 +1,102 @@
+from __future__ import annotations
 
-#  import matplotlib as mp
-#  import matplotlib.pyplot as plt
-#  from geometor.elements.utils import *
-#  from geometor.elements.render.utils import *
+from ..common import *
+from ..styles import *
+from ..utils import *
 
-#  FIG_W = 16
-#  FIG_H = 9
+#  from .._html import _create_html_page
 
-#  plt.rcParams['figure.figsize'] = [FIG_W, FIG_H]
-#  plt.style.use('dark_background')
+#  from ._sequences import _plot_sequence
 
-from .titler import *
+from ..plotter import Plotter
 
-#  def plot_title(title, folder, filename, color='w', size=44):
-    #  """TODO: Docstring for plot_title.
 
-    #  :title: TODO
-    #  :returns: TODO
+class Titler(Plotter):
+    """
+    The Titler class is primarily for creating slides with latex rendered or overlays
 
-    #  """
-    #  folder = os.path.abspath(folder)
-    #  os.makedirs(folder, exist_ok=True)
+    parameters:
+        ``plot_name`` : :class:`str`
+            the name of the plot
 
-    #  fig, ax = plt.subplots(1, 1)
-    #  plt.tight_layout()
-    #  ax.axis('off')
-    #  ax.set_aspect('equal')
-    #  ax.clear()
-    #  ax.axis(False)
-    #  ax.text(0.5, 0.5, title, ha='center', va='center', fontdict={'color': color, 'size': size})
+    attributes:
+        model (Model): The geometric model to be processed and plotted.
+        plot_name (str, optional): An optional name for the plot.
+        margin (float, optional): An optional parameter to control the margins of the plot.
+        fig (Figure): Matplotlib figure object.
+        ax (Axes): Matplotlib axes object for the main plot.
+        ax_label (Axes): Matplotlib axes object for the label.
+    """
 
-    #  return snapshot_2(folder, filename)
-    #  #  plt.show()
+    def __init__(
+        self,
+        model: Model = None,
+        plot_name: str = None,
+        margin=0.1,
+        FIG_W=16,
+        FIG_H=9,
+    ):
+        """
+        Initializes the Sequencer with the given model and optional parameters.
+        Sets up the figure size, style, and layout using Matplotlib.
 
-#  def plot_overlay(title, folder, filename, color='w', size=44):
-    #  """TODO: Docstring for plot_overlay.
+        Args:
+            model (Model): The geometric model to be processed and plotted.
+            plot_name (str, optional): An optional name for the plot.
+            margin (float, optional): An optional parameter to control the margins of the plot.
+        """
+        super().__init__(plot_name, margin, FIG_W, FIG_H)
 
-    #  :title: TODO
-    #  :returns: TODO
+    def plot_title(self, title, folder, filename, color="w", size=44):
+        """TODO: Docstring for plot_title.
 
-    #  """
-    #  folder = os.path.abspath(folder)
-    #  os.makedirs(folder, exist_ok=True)
+        :title: TODO
+        :returns: TODO
 
-    #  fontdict={'family': 'Fira Sans Condensed', 'color': color, 'size': size}
+        """
+        folder = os.path.abspath(folder)
+        os.makedirs(folder, exist_ok=True)
 
-    #  fig, ax = plt.subplots(1, 1)
-    #  plt.tight_layout()
-    #  ax.axis('off')
-    #  ax.set_aspect('equal')
-    #  ax.clear()
-    #  ax.axis(False)
-    #  ax.text(0.15, 0.8, title, 
-            #  ha='center', va='top', 
-            #  fontdict={'color': color, 'size': size})
+        self.reset_ax_main()
+        self.ax_main.text(
+            0.5,
+            0.5,
+            title,
+            ha="center",
+            va="center",
+            fontdict={"color": color, "size": size},
+        )
 
-    #  return snapshot_2(folder, filename, transparent=True)
-    #  #  plt.show()
+        return snapshot_2(folder, filename)
+        #  plt.show()
+
+    def plot_overlay(self, title, folder, filename, color="w", size=44):
+        """TODO: Docstring for plot_overlay.
+
+        :title: TODO
+        :returns: TODO
+
+        """
+        folder = os.path.abspath(folder)
+        os.makedirs(folder, exist_ok=True)
+
+        fontdict = {"family": "Fira Sans Condensed", "color": color, "size": size}
+
+        fig, ax = plt.subplots(1, 1)
+        plt.tight_layout()
+        ax.axis("off")
+        ax.set_aspect("equal")
+        ax.clear()
+        ax.axis(False)
+        ax.text(
+            0.15,
+            0.8,
+            title,
+            ha="center",
+            va="top",
+            fontdict={"color": color, "size": size},
+        )
+
+        return snapshot_2(folder, filename, transparent=True)
+        #  plt.show()
 

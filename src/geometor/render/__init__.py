@@ -23,8 +23,3 @@ from .groups import *
 from .sequencer import *
 from .titler import *
 
-
-# TODO: move to divine -extend sequencer to render sections
-#  from .sections import *
-#  from .groups import *
-#  from .ranges import *
