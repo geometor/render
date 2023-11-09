@@ -15,3 +15,9 @@ geometor.render
    geometor.render.sequencer
    geometor.render.styles
    geometor.render.titler
+
+   geometor.render.chains
+   geometor.render.colors
+   geometor.render.groups
+   geometor.render.sections
+   geometor.render.utils
