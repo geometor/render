@@ -25,38 +25,26 @@ class Plotter:
     """
     The Plotter class handles the fundametals for rendering a geometric construction
 
-    parameters:
-        ``name`` : :class:`str`
-            establish name for the model instance
+    parameters
+    ----------
+    - ``name`` : :class:`str`: establish name for the model instance
 
-    attributes:
-        :attr:`plot_name` : :class:`str`
-            name of the model
-        :attr:`margin` : :class:`float`
-            margin for the plot
-        :attr:`FIG_W` : :class:`int`
-            width of the figure
-        :attr:`FIG_H` : :class:`int`
-            height of the figure
-        :attr:`ax_main` : :class:`matplotlib.axes.Axes`
-            Axes for the main graph
-        :attr:`ax_header` : :class:`matplotlib.axes.Axes`
-            Axes for the header panel
-        :attr:`ax_footer` : :class:`matplotlib.axes.Axes`
-            Axes for the footer panel
-        :attr:`figure` : :class:`matplotlib.figure.Figure`
-            the main figure of the plot
+    attributes
+    ----------
+    - :attr:`plot_name` -> :class:`str`: name of the model
+    - :attr:`margin` -> :class:`float`: margin for the plot
+    - :attr:`FIG_W` -> :class:`int`: width of the figure
+    - :attr:`FIG_H` -> :class:`int`: height of the figure
+    - :attr:`ax_main` -> :class:`matplotlib.axes.Axes`: Axes for the main graph
+    - :attr:`ax_header` -> :class:`matplotlib.axes.Axes`: Axes for the header panel
+    - :attr:`ax_footer` -> :class:`matplotlib.axes.Axes`: Axes for the footer panel
+    - :attr:`figure` -> :class:`matplotlib.figure.Figure`: the main figure of the plot
 
-    methods:
-        :meth:`plot_point` : :class:`Point <sympy.geometry.point.Point>`
-            - plot from sympy point
-        :meth:`plot_line` : :class:`Line <sympy.geometry.line.Line>`
-            - plot from sympy line
-        :meth:`plot_circle` : :class:`Circle <sympy.geometry.ellipse.Circle>`
-            - construct line from two points
-            - add to model if unique
-            - coordinate meta data
-            - find intersections with other structs
+    methods
+    -------
+    - :meth:`plot_point` -> :class:`Point <sympy.geometry.point.Point>`
+    - :meth:`plot_line` -> :class:`Line <sympy.geometry.line.Line>`
+    - :meth:`plot_circle` -> :class:`Circle <sympy.geometry.ellipse.Circle>`
     """
 
     def __init__(
