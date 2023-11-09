@@ -1,7 +1,6 @@
 render
 ======
 
-greetinsg
 
 .. include:: intro.rst
 
@@ -30,8 +29,8 @@ contents:
 
 
 
-Indices and tables
-==================
+indices:
+--------
 
 * :ref:`genindex`
 * :ref:`modindex`

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>plotter &mdash; GEOMETOR • render</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/rtd-dark.css" type="text/css" />
+    <link rel="canonical" href="https://geometor.github.io/render/modules/geometor.render.plotter.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=187304be"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="sequencer" href="../geometor.render.sequencer/" />
+    <link rel="prev" title="geometor.render" href="../" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../log/atom.xml"
+  title="GEOMETOR • render"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            GEOMETOR • render
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../mission/">mission</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage/">usage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../">geometor.render</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">plotter</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#geometor.render.plotter.Plotter"><code class="docutils literal notranslate"><span class="pre">Plotter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.annotate_point"><code class="docutils literal notranslate"><span class="pre">Plotter.annotate_point()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_circle"><code class="docutils literal notranslate"><span class="pre">Plotter.plot_circle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_circle_points"><code class="docutils literal notranslate"><span class="pre">Plotter.plot_circle_points()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_circle_radius"><code class="docutils literal notranslate"><span class="pre">Plotter.plot_circle_radius()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_element"><code class="docutils literal notranslate"><span class="pre">Plotter.plot_element()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_footer"><code class="docutils literal notranslate"><span class="pre">Plotter.plot_footer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_header"><code class="docutils literal notranslate"><span class="pre">Plotter.plot_header()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_line"><code class="docutils literal notranslate"><span class="pre">Plotter.plot_line()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_line_segment"><code class="docutils literal notranslate"><span class="pre">Plotter.plot_line_segment()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_model"><code class="docutils literal notranslate"><span class="pre">Plotter.plot_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_point"><code class="docutils literal notranslate"><span class="pre">Plotter.plot_point()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_polygon"><code class="docutils literal notranslate"><span class="pre">Plotter.plot_polygon()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_segment"><code class="docutils literal notranslate"><span class="pre">Plotter.plot_segment()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_selected_circle"><code class="docutils literal notranslate"><span class="pre">Plotter.plot_selected_circle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_selected_line"><code class="docutils literal notranslate"><span class="pre">Plotter.plot_selected_line()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_selected_points"><code class="docutils literal notranslate"><span class="pre">Plotter.plot_selected_points()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_wedge"><code class="docutils literal notranslate"><span class="pre">Plotter.plot_wedge()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.reset_ax_all"><code class="docutils literal notranslate"><span class="pre">Plotter.reset_ax_all()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.reset_ax_footer"><code class="docutils literal notranslate"><span class="pre">Plotter.reset_ax_footer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.reset_ax_header"><code class="docutils literal notranslate"><span class="pre">Plotter.reset_ax_header()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.reset_ax_main"><code class="docutils literal notranslate"><span class="pre">Plotter.reset_ax_main()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.set_ax_main_bounds"><code class="docutils literal notranslate"><span class="pre">Plotter.set_ax_main_bounds()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.set_plotter_limits_from_points"><code class="docutils literal notranslate"><span class="pre">Plotter.set_plotter_limits_from_points()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.zoom_to_bounds"><code class="docutils literal notranslate"><span class="pre">Plotter.zoom_to_bounds()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.zoom_to_points"><code class="docutils literal notranslate"><span class="pre">Plotter.zoom_to_points()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../geometor.render.sequencer/">sequencer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geometor.render.styles/">styles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geometor.render.titler/">titler</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../demos/">demos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../refs/">references</a></li>
+<li class="toctree-l1"><a class="reference external" href="/log#https://">log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todos/">todos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/">glossary</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">GEOMETOR • render</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../">geometor.render</a></li>
+      <li class="breadcrumb-item active">plotter</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/geometor/render/blob/main/docsrc/modules/geometor.render.plotter.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../" class="btn btn-neutral float-left" title="geometor.render" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../geometor.render.sequencer/" class="btn btn-neutral float-right" title="sequencer" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <section id="module-geometor.render.plotter">
+<span id="plotter"></span><h1>plotter<a class="headerlink" href="#module-geometor.render.plotter" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geometor.render.plotter.</span></span><span class="sig-name descname"><span class="pre">Plotter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plot_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">margin_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FIG_W</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FIG_H</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#geometor.render.plotter.Plotter" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Plotter class handles the fundametals for rendering a geometric construction</p>
+<dl>
+<dt>parameters:</dt><dd><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">name</span></code><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></dt><dd><p>establish name for the model instance</p>
+</dd>
+</dl>
+</dd>
+<dt>attributes:</dt><dd><dl>
+<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">plot_name</span></code><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></dt><dd><p>name of the model</p>
+</dd>
+<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">margin</span></code><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span></dt><dd><p>margin for the plot</p>
+</dd>
+<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">FIG_W</span></code><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span></dt><dd><p>width of the figure</p>
+</dd>
+<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">FIG_H</span></code><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span></dt><dd><p>height of the figure</p>
+</dd>
+<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">ax_main</span></code><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></span></dt><dd><p>Axes for the main graph</p>
+</dd>
+<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">ax_header</span></code><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></span></dt><dd><p>Axes for the header panel</p>
+</dd>
+<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">ax_footer</span></code><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></span></dt><dd><p>Axes for the footer panel</p>
+</dd>
+<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">figure</span></code><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.figure.Figure</span></code></span></dt><dd><p>the main figure of the plot</p>
+</dd>
+</dl>
+</dd>
+<dt>methods:</dt><dd><dl>
+<dt><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_point" title="geometor.render.plotter.Plotter.plot_point"><code class="xref py py-meth docutils literal notranslate"><span class="pre">plot_point()</span></code></a><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Point</span></code></span></dt><dd><ul class="simple">
+<li><p>plot from sympy point</p></li>
+</ul>
+</dd>
+<dt><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_line" title="geometor.render.plotter.Plotter.plot_line"><code class="xref py py-meth docutils literal notranslate"><span class="pre">plot_line()</span></code></a><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Line</span></code></span></dt><dd><ul class="simple">
+<li><p>plot from sympy line</p></li>
+</ul>
+</dd>
+<dt><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_circle" title="geometor.render.plotter.Plotter.plot_circle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">plot_circle()</span></code></a><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Circle</span></code></span></dt><dd><ul class="simple">
+<li><p>construct line from two points</p></li>
+<li><p>add to model if unique</p></li>
+<li><p>coordinate meta data</p></li>
+<li><p>find intersections with other structs</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.annotate_point">
+<span class="sig-name descname"><span class="pre">annotate_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Point</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#geometor.render.plotter.Plotter.annotate_point" title="Link to this definition"></a></dt>
+<dd><p>Annotate the given point with the provided text on the given axes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.plot_circle">
+<span class="sig-name descname"><span class="pre">plot_circle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">spg.Circle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">plt.Circle</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#geometor.render.plotter.Plotter.plot_circle" title="Link to this definition"></a></dt>
+<dd><p>takes a sympy circle and plots with the matplotlib Circle patch</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.plot_circle_points">
+<span class="sig-name descname"><span class="pre">plot_circle_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">spg.Point</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#geometor.render.plotter.Plotter.plot_circle_points" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.plot_circle_radius">
+<span class="sig-name descname"><span class="pre">plot_circle_radius</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius_segment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">spg.Segment</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#geometor.render.plotter.Plotter.plot_circle_radius" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.plot_element">
+<span class="sig-name descname"><span class="pre">plot_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">el</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#geometor.render.plotter.Plotter.plot_element" title="Link to this definition"></a></dt>
+<dd><p>instanstiates and returns a PlotElement object
+containing all the necessary matplotlib artifacts for rendering a geometric element</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.plot_footer">
+<span class="sig-name descname"><span class="pre">plot_footer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#geometor.render.plotter.Plotter.plot_footer" title="Link to this definition"></a></dt>
+<dd><p>sets up 3 panels in footer for index, description and label</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.plot_header">
+<span class="sig-name descname"><span class="pre">plot_header</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#geometor.render.plotter.Plotter.plot_header" title="Link to this definition"></a></dt>
+<dd><p>sets up one panel for header</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.plot_line">
+<span class="sig-name descname"><span class="pre">plot_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">spg.Line</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">mp.Line2D</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#geometor.render.plotter.Plotter.plot_line" title="Link to this definition"></a></dt>
+<dd><p>returns list of plot artists</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.plot_line_segment">
+<span class="sig-name descname"><span class="pre">plot_line_segment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">spg.Line</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#geometor.render.plotter.Plotter.plot_line_segment" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.plot_model">
+<span class="sig-name descname"><span class="pre">plot_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotate_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#geometor.render.plotter.Plotter.plot_model" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.plot_point">
+<span class="sig-name descname"><span class="pre">plot_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">sp_Point</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#geometor.render.plotter.Plotter.plot_point" title="Link to this definition"></a></dt>
+<dd><p>plot the point with corresponding styles
+returns a list of artists</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.plot_polygon">
+<span class="sig-name descname"><span class="pre">plot_polygon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">poly</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">spg.Polygon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#geometor.render.plotter.Plotter.plot_polygon" title="Link to this definition"></a></dt>
+<dd><p>takes a sympy Polygon and plots with the matplotlib Polygon patch</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.plot_segment">
+<span class="sig-name descname"><span class="pre">plot_segment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">segment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">spg.Segment</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#geometor.render.plotter.Plotter.plot_segment" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.plot_selected_circle">
+<span class="sig-name descname"><span class="pre">plot_selected_circle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">spg.Circle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">plt.Circle</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#geometor.render.plotter.Plotter.plot_selected_circle" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.plot_selected_line">
+<span class="sig-name descname"><span class="pre">plot_selected_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">spg.Line</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">mp.Line2D</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#geometor.render.plotter.Plotter.plot_selected_line" title="Link to this definition"></a></dt>
+<dd><p>returns list of plot artists</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.plot_selected_points">
+<span class="sig-name descname"><span class="pre">plot_selected_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">spg.Point</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#geometor.render.plotter.Plotter.plot_selected_points" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.plot_wedge">
+<span class="sig-name descname"><span class="pre">plot_wedge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wedge</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Wedge</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">mp.patch.Wedge</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#geometor.render.plotter.Plotter.plot_wedge" title="Link to this definition"></a></dt>
+<dd><p>takes a geometor.model.Wedge and maps it to a matplotlib patch</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.reset_ax_all">
+<span class="sig-name descname"><span class="pre">reset_ax_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#geometor.render.plotter.Plotter.reset_ax_all" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.reset_ax_footer">
+<span class="sig-name descname"><span class="pre">reset_ax_footer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#geometor.render.plotter.Plotter.reset_ax_footer" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.reset_ax_header">
+<span class="sig-name descname"><span class="pre">reset_ax_header</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#geometor.render.plotter.Plotter.reset_ax_header" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.reset_ax_main">
+<span class="sig-name descname"><span class="pre">reset_ax_main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#geometor.render.plotter.Plotter.reset_ax_main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.set_ax_main_bounds">
+<span class="sig-name descname"><span class="pre">set_ax_main_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#geometor.render.plotter.Plotter.set_ax_main_bounds" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.set_plotter_limits_from_points">
+<span class="sig-name descname"><span class="pre">set_plotter_limits_from_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#geometor.render.plotter.Plotter.set_plotter_limits_from_points" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.zoom_to_bounds">
+<span class="sig-name descname"><span class="pre">zoom_to_bounds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometor.render.plotter.Plotter.zoom_to_bounds" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.zoom_to_points">
+<span class="sig-name descname"><span class="pre">zoom_to_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zoom_pts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#geometor.render.plotter.Plotter.zoom_to_points" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+<div class="section">
+   
+</div>
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../" class="btn btn-neutral float-left" title="geometor.render" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../geometor.render.sequencer/" class="btn btn-neutral float-right" title="sequencer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, GEOMETOR.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
