@@ -158,50 +158,32 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geometor.render.plotter.</span></span><span class="sig-name descname"><span class="pre">Plotter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plot_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">margin_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FIG_W</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FIG_H</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#geometor.render.plotter.Plotter" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>The Plotter class handles the fundametals for rendering a geometric construction</p>
-<dl>
-<dt>parameters:</dt><dd><dl>
-<dt><code class="docutils literal notranslate"><span class="pre">name</span></code><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></dt><dd><p>establish name for the model instance</p>
-</dd>
-</dl>
-</dd>
-<dt>attributes:</dt><dd><dl>
-<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">plot_name</span></code><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></dt><dd><p>name of the model</p>
-</dd>
-<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">margin</span></code><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span></dt><dd><p>margin for the plot</p>
-</dd>
-<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">FIG_W</span></code><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span></dt><dd><p>width of the figure</p>
-</dd>
-<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">FIG_H</span></code><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span></dt><dd><p>height of the figure</p>
-</dd>
-<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">ax_main</span></code><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></span></dt><dd><p>Axes for the main graph</p>
-</dd>
-<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">ax_header</span></code><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></span></dt><dd><p>Axes for the header panel</p>
-</dd>
-<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">ax_footer</span></code><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></span></dt><dd><p>Axes for the footer panel</p>
-</dd>
-<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">figure</span></code><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.figure.Figure</span></code></span></dt><dd><p>the main figure of the plot</p>
-</dd>
-</dl>
-</dd>
-<dt>methods:</dt><dd><dl>
-<dt><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_point" title="geometor.render.plotter.Plotter.plot_point"><code class="xref py py-meth docutils literal notranslate"><span class="pre">plot_point()</span></code></a><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Point</span></code></span></dt><dd><ul class="simple">
-<li><p>plot from sympy point</p></li>
+<section id="parameters">
+<h2>parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> : <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>: establish name for the model instance</p></li>
 </ul>
-</dd>
-<dt><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_line" title="geometor.render.plotter.Plotter.plot_line"><code class="xref py py-meth docutils literal notranslate"><span class="pre">plot_line()</span></code></a><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Line</span></code></span></dt><dd><ul class="simple">
-<li><p>plot from sympy line</p></li>
+</section>
+<section id="attributes">
+<h2>attributes<a class="headerlink" href="#attributes" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">plot_name</span></code> -&gt; <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>: name of the model</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">margin</span></code> -&gt; <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>: margin for the plot</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">FIG_W</span></code> -&gt; <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>: width of the figure</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">FIG_H</span></code> -&gt; <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>: height of the figure</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ax_main</span></code> -&gt; <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code>: Axes for the main graph</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ax_header</span></code> -&gt; <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code>: Axes for the header panel</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ax_footer</span></code> -&gt; <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code>: Axes for the footer panel</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">figure</span></code> -&gt; <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.figure.Figure</span></code>: the main figure of the plot</p></li>
 </ul>
-</dd>
-<dt><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_circle" title="geometor.render.plotter.Plotter.plot_circle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">plot_circle()</span></code></a><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Circle</span></code></span></dt><dd><ul class="simple">
-<li><p>construct line from two points</p></li>
-<li><p>add to model if unique</p></li>
-<li><p>coordinate meta data</p></li>
-<li><p>find intersections with other structs</p></li>
+</section>
+<section id="methods">
+<h2>methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_point" title="geometor.render.plotter.Plotter.plot_point"><code class="xref py py-meth docutils literal notranslate"><span class="pre">plot_point()</span></code></a> -&gt; <code class="xref py py-class docutils literal notranslate"><span class="pre">Point</span></code></p></li>
+<li><p><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_line" title="geometor.render.plotter.Plotter.plot_line"><code class="xref py py-meth docutils literal notranslate"><span class="pre">plot_line()</span></code></a> -&gt; <code class="xref py py-class docutils literal notranslate"><span class="pre">Line</span></code></p></li>
+<li><p><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_circle" title="geometor.render.plotter.Plotter.plot_circle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">plot_circle()</span></code></a> -&gt; <code class="xref py py-class docutils literal notranslate"><span class="pre">Circle</span></code></p></li>
 </ul>
-</dd>
-</dl>
-</dd>
-</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="geometor.render.plotter.Plotter.annotate_point">
 <span class="sig-name descname"><span class="pre">annotate_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Point</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#geometor.render.plotter.Plotter.annotate_point" title="Link to this definition"></a></dt>
@@ -339,6 +321,7 @@ returns a list of artists</p>
 <span class="sig-name descname"><span class="pre">zoom_to_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zoom_pts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#geometor.render.plotter.Plotter.zoom_to_points" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
+</section>
 </dd></dl>
 
 </section>
