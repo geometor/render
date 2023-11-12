@@ -8,12 +8,14 @@
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/rtd-dark.css" type="text/css" />
+      <link rel="stylesheet" href="../../https://geometor.github.io/model/_static/css/rtd-dark.css" type="text/css" />
     <link rel="canonical" href="https://geometor.github.io/render/modules/geometor.render.groups.html" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../_static/documentation_options.js?v=187304be"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -66,6 +68,7 @@
           
           <a href="../../" class="icon icon-home">
             GEOMETOR • render
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
@@ -85,7 +88,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../geometor.render.styles/">geometor.render.styles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../geometor.render.titler/">geometor.render.titler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../geometor.render.chains/">geometor.render.chains</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">geometor.render.groups</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">geometor.render.groups</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#geometor.render.groups.plot_group"><code class="docutils literal notranslate"><span class="pre">plot_group()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#geometor.render.groups.plot_groups"><code class="docutils literal notranslate"><span class="pre">plot_groups()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../geometor.render.sections/">geometor.render.sections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../geometor.render.colors/">geometor.render.colors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../geometor.render.utils/">geometor.render.utils</a></li>
@@ -118,14 +125,28 @@
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/geometor/render/blob/main/docsrc/modules/geometor.render.groups.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
-  </ul>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../geometor.render.colors/" class="btn btn-neutral float-left" title="geometor.render.colors" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../geometor.render.sections/" class="btn btn-neutral float-right" title="geometor.render.sections" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="module-geometor.render.groups">
-<span id="geometor-render-groups"></span><h1>geometor.render.groups<a class="headerlink" href="#module-geometor.render.groups" title="Link to this heading">¶</a></h1>
+<span id="geometor-render-groups"></span><h1>geometor.render.groups<a class="headerlink" href="#module-geometor.render.groups" title="Link to this heading"></a></h1>
 <p>functions to plot groupings of sections</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="geometor.render.groups.plot_group">
+<span class="sig-prename descclassname"><span class="pre">geometor.render.groups.</span></span><span class="sig-name descname"><span class="pre">plot_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plotter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../geometor.render.plotter/#geometor.render.plotter.Plotter" title="geometor.render.plotter.Plotter"><span class="pre">Plotter</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extensions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['svg',</span> <span class="pre">'png']</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/geometor/render/groups/#plot_group"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geometor.render.groups.plot_group" title="Link to this definition"></a></dt>
+<dd><p>Plot the group then remove it.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geometor.render.groups.plot_groups">
+<span class="sig-prename descclassname"><span class="pre">geometor.render.groups.</span></span><span class="sig-name descname"><span class="pre">plot_groups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plotter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../geometor.render.plotter/#geometor.render.plotter.Plotter" title="geometor.render.plotter.Plotter"><span class="pre">Plotter</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.9/library/stdtypes.html#dict" title="(in Python v3.9)"><span class="pre">dict</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.9/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">extensions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['svg',</span> <span class="pre">'png']</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/geometor/render/groups/#plot_groups"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geometor.render.groups.plot_groups" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
 
 <div class="section">

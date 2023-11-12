@@ -8,12 +8,14 @@
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/rtd-dark.css" type="text/css" />
+      <link rel="stylesheet" href="../../https://geometor.github.io/model/_static/css/rtd-dark.css" type="text/css" />
     <link rel="canonical" href="https://geometor.github.io/render/modules/geometor.render.utils.html" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../_static/documentation_options.js?v=187304be"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -66,6 +68,7 @@
           
           <a href="../../" class="icon icon-home">
             GEOMETOR • render
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
@@ -88,7 +91,18 @@
 <li class="toctree-l2"><a class="reference internal" href="../geometor.render.groups/">geometor.render.groups</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../geometor.render.sections/">geometor.render.sections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../geometor.render.colors/">geometor.render.colors</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">geometor.render.utils</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">geometor.render.utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#geometor.render.utils.set_bounds"><code class="docutils literal notranslate"><span class="pre">set_bounds()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#geometor.render.utils.snapshot"><code class="docutils literal notranslate"><span class="pre">snapshot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#geometor.render.utils.snapshot_2"><code class="docutils literal notranslate"><span class="pre">snapshot_2()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#geometor.render.utils.display"><code class="docutils literal notranslate"><span class="pre">display()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#geometor.render.utils.adjust_ratio"><code class="docutils literal notranslate"><span class="pre">adjust_ratio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#geometor.render.utils.adjust_lims"><code class="docutils literal notranslate"><span class="pre">adjust_lims()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#geometor.render.utils.get_limits_from_points"><code class="docutils literal notranslate"><span class="pre">get_limits_from_points()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#geometor.render.utils.ax_set_bounds"><code class="docutils literal notranslate"><span class="pre">ax_set_bounds()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#geometor.render.utils.ax_set_spines"><code class="docutils literal notranslate"><span class="pre">ax_set_spines()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../demos/">demos</a></li>
@@ -118,14 +132,63 @@
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/geometor/render/blob/main/docsrc/modules/geometor.render.utils.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
-  </ul>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../geometor.render.sections/" class="btn btn-neutral float-left" title="geometor.render.sections" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../demos/" class="btn btn-neutral float-right" title="demos" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="module-geometor.render.utils">
-<span id="geometor-render-utils"></span><h1>geometor.render.utils<a class="headerlink" href="#module-geometor.render.utils" title="Link to this heading">¶</a></h1>
+<span id="geometor-render-utils"></span><h1>geometor.render.utils<a class="headerlink" href="#module-geometor.render.utils" title="Link to this heading"></a></h1>
 <p>functions to plot utils</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="geometor.render.utils.set_bounds">
+<span class="sig-prename descclassname"><span class="pre">geometor.render.utils.</span></span><span class="sig-name descname"><span class="pre">set_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">limx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limy</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.sympy.org/latest/modules/geometry/polygons.html#sympy.geometry.polygon.Polygon" title="(in SymPy v1.12)"><span class="pre">Polygon</span></a></span></span><a class="reference internal" href="../../_modules/geometor/render/utils/#set_bounds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geometor.render.utils.set_bounds" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geometor.render.utils.snapshot">
+<span class="sig-prename descclassname"><span class="pre">geometor.render.utils.</span></span><span class="sig-name descname"><span class="pre">snapshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/geometor/render/utils/#snapshot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geometor.render.utils.snapshot" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geometor.render.utils.snapshot_2">
+<span class="sig-prename descclassname"><span class="pre">geometor.render.utils.</span></span><span class="sig-name descname"><span class="pre">snapshot_2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transparent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/geometor/render/utils/#snapshot_2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geometor.render.utils.snapshot_2" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geometor.render.utils.display">
+<span class="sig-prename descclassname"><span class="pre">geometor.render.utils.</span></span><span class="sig-name descname"><span class="pre">display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/geometor/render/utils/#display"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geometor.render.utils.display" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geometor.render.utils.adjust_ratio">
+<span class="sig-prename descclassname"><span class="pre">geometor.render.utils.</span></span><span class="sig-name descname"><span class="pre">adjust_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">w</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/geometor/render/utils/#adjust_ratio"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geometor.render.utils.adjust_ratio" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geometor.render.utils.adjust_lims">
+<span class="sig-prename descclassname"><span class="pre">geometor.render.utils.</span></span><span class="sig-name descname"><span class="pre">adjust_lims</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">limx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">margin_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/geometor/render/utils/#adjust_lims"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geometor.render.utils.adjust_lims" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geometor.render.utils.get_limits_from_points">
+<span class="sig-prename descclassname"><span class="pre">geometor.render.utils.</span></span><span class="sig-name descname"><span class="pre">get_limits_from_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pts</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/geometor/render/utils/#get_limits_from_points"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geometor.render.utils.get_limits_from_points" title="Link to this definition"></a></dt>
+<dd><p>find x, y limits from a set of points</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geometor.render.utils.ax_set_bounds">
+<span class="sig-prename descclassname"><span class="pre">geometor.render.utils.</span></span><span class="sig-name descname"><span class="pre">ax_set_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/geometor/render/utils/#ax_set_bounds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geometor.render.utils.ax_set_bounds" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geometor.render.utils.ax_set_spines">
+<span class="sig-prename descclassname"><span class="pre">geometor.render.utils.</span></span><span class="sig-name descname"><span class="pre">ax_set_spines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/geometor/render/utils/#ax_set_spines"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geometor.render.utils.ax_set_spines" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
 
 <div class="section">

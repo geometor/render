@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>geometor.render.styles &mdash; GEOMETOR • render</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../https://geometor.github.io/model/_static/css/rtd-dark.css" type="text/css" />
+    <link rel="canonical" href="https://geometor.github.io/render/_modules/geometor/render/styles.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=187304be"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex/" />
+    <link rel="search" title="Search" href="../../../../search/" />   
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../../../log/atom.xml"
+  title="GEOMETOR • render"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../" class="icon icon-home">
+            GEOMETOR • render
+              <img src="../../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mission/">mission</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../usage/">usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modules/">modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../demos/">demos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../refs/">references</a></li>
+<li class="toctree-l1"><a class="reference external" href="/log#https://">log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../todos/">todos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/">glossary</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../">GEOMETOR • render</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../">Module code</a></li>
+      <li class="breadcrumb-item active">geometor.render.styles</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <h1>Source code for geometor.render.styles</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">dictionary of style sets for matplotlib</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">._default</span> <span class="kn">import</span> <span class="n">_default</span>
+<span class="kn">from</span> <span class="nn">._red</span> <span class="kn">import</span> <span class="n">_red</span>
+<span class="kn">from</span> <span class="nn">._green</span> <span class="kn">import</span> <span class="n">_green</span>
+<span class="kn">from</span> <span class="nn">._blue</span> <span class="kn">import</span> <span class="n">_blue</span>
+<span class="kn">from</span> <span class="nn">.z_levels</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">STYLES</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">STYLES</span><span class="p">[</span><span class="s1">&#39;default&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_default</span>
+<span class="n">STYLES</span><span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_red</span>
+<span class="n">STYLES</span><span class="p">[</span><span class="s1">&#39;green&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_green</span>
+<span class="n">STYLES</span><span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_blue</span>
+
+<div class="viewcode-block" id="get_styles">
+<a class="viewcode-back" href="../../../../modules/geometor.render.styles/#geometor.render.styles.get_styles">[docs]</a>
+<span class="k">def</span> <span class="nf">get_styles</span><span class="p">(</span><span class="n">element_type</span><span class="p">,</span> <span class="n">classes</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="n">styles</span> <span class="o">=</span> <span class="n">STYLES</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">element_type</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="c1"># override default with classes</span>
+    <span class="k">if</span> <span class="n">classes</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">class_name</span> <span class="ow">in</span> <span class="n">classes</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">class_name</span> <span class="ow">in</span> <span class="n">STYLES</span><span class="p">:</span>
+                <span class="n">styles</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">STYLES</span><span class="p">[</span><span class="n">class_name</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">element_type</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
+
+    <span class="k">return</span> <span class="n">styles</span></div>
+
+
+<span class="c1">#  STYLES[&#39;given&#39;] = {&#39;color&#39;:&#39;#FFF6&#39;, &#39;markersize&#39;:7, &#39;marker&#39;:&#39;o&#39;}</span>
+
+<span class="c1">#  STYLES[&#39;guide&#39;] = {&#39;color&#39;:&#39;#333&#39;, &#39;linestyle&#39;:&#39;:&#39;}</span>
+
+<span class="c1">#  STYLES[&#39;blue&#39;] = {&#39;color&#39;:&#39;#66F&#39;, &#39;linestyle&#39;:&#39;:&#39;}</span>
+<span class="c1">#  STYLES[&#39;green&#39;] = {&#39;color&#39;:&#39;#2F2&#39;, &#39;linestyle&#39;:&#39;:&#39;}</span>
+<span class="c1">#  STYLES[&#39;pappus&#39;] = {&#39;linestyle&#39;:&#39;--&#39;}</span>
+<span class="c1">#  STYLES[&#39;pink&#39;] = {&#39;color&#39;:&#39;#F99&#39;, &#39;linestyle&#39;:&#39;--&#39;}</span>
+<span class="c1">#  STYLES[&#39;bisector&#39;] = {&#39;linestyle&#39;:&#39;-.&#39;}</span>
+
+<span class="c1">#  STYLES[&#39;set1&#39;] = {&#39;color&#39;:&#39;#09C&#39;, &#39;linestyle&#39;:&#39;:&#39;}</span>
+<span class="c1">#  STYLES[&#39;set1pt&#39;] = {&#39;color&#39;:&#39;#09C&#39;, &#39;markersize&#39;:8, &#39;marker&#39;:&#39;o&#39;}</span>
+
+<span class="c1">#  STYLES[&#39;set2&#39;] = {&#39;color&#39;:&#39;#C33&#39;, &#39;linestyle&#39;:&#39;:&#39;}</span>
+<span class="c1">#  STYLES[&#39;set2pt&#39;] = {&#39;color&#39;:&#39;#C33&#39;, &#39;markersize&#39;:8, &#39;marker&#39;:&#39;o&#39;}</span>
+
+<span class="c1">#  STYLES[&#39;ring&#39;] = {&#39;color&#39;:&#39;#4444&#39;, &#39;linestyle&#39;:&#39;-&#39;}</span>
+
+<span class="c1">#  STYLES[&#39;gold&#39;] = {&#39;color&#39;:&#39;#C90&#39;, &#39;linestyle&#39;:&#39;:&#39;}</span>
+<span class="c1">#  STYLES[&#39;goldpt&#39;] = {&#39;color&#39;:&#39;#C90&#39;, &#39;markersize&#39;:8, &#39;marker&#39;:&#39;o&#39;}</span>
+
+
+<span class="c1">#  STYLES[&#39;circle&#39;] = {&#39;color&#39;:&#39;#0FF&#39;, &#39;markersize&#39;:7, &#39;marker&#39;:&#39;o&#39;}</span>
+<span class="c1">#  STYLES[&#39;square&#39;] = {&#39;color&#39;:&#39;#FF0&#39;, &#39;markersize&#39;:7, &#39;marker&#39;:&#39;s&#39;}</span>
+<span class="c1">#  STYLES[&#39;diamond&#39;] = {&#39;color&#39;:&#39;#F0F&#39;, &#39;markersize&#39;:7, &#39;marker&#39;:&#39;D&#39;}</span>
+<span class="c1">#  STYLES[&#39;star&#39;] = {&#39;color&#39;:&#39;#F99&#39;, &#39;markersize&#39;:12, &#39;marker&#39;:&#39;*&#39;}</span>
+
+<span class="c1">#  STYLES[&#39;nine&#39;] = {&#39;edgecolor&#39;:&#39;#3F06&#39;, &#39;facecolor&#39;:&#39;#3F03&#39;, &#39;linestyle&#39;:&#39;-&#39;, &#39;linewidth&#39;:1}</span>
+<span class="c1">#  STYLES[&#39;yellow&#39;] = {&#39;edgecolor&#39;:&#39;#FF09&#39;, &#39;facecolor&#39;:&#39;#FF03&#39;, &#39;linestyle&#39;:&#39;-&#39;, &#39;linewidth&#39;:1}</span>
+<span class="c1">#  STYLES[&#39;cyan&#39;] = {&#39;color&#39;:&#39;#0FF3&#39;, &#39;linestyle&#39;:&#39;-&#39;}</span>
+<span class="c1">#  STYLES[&#39;cyanpt&#39;] = {&#39;color&#39;:&#39;#C90&#39;, &#39;markersize&#39;:8, &#39;marker&#39;:&#39;o&#39;}</span>
+<span class="c1">#  STYLES[&#39;magenta&#39;] = {&#39;color&#39;:&#39;#F0F3&#39;, &#39;linestyle&#39;:&#39;-&#39;}</span>
+
+
+</pre></div>
+<div class="section">
+   
+</div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, GEOMETOR.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
