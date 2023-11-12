@@ -1,7 +1,5 @@
-sections
-========
+
+geometor.render.sections
+========================
 
 .. automodule:: geometor.render.sections
-   :members:
-   :undoc-members:
-   :show-inheritance:
