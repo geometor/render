@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>styles &mdash; GEOMETOR • render</title>
+  <title>geometor.render.styles &mdash; GEOMETOR • render</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -14,16 +14,14 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../_static/documentation_options.js?v=187304be"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
-    <link rel="next" title="titler" href="../geometor.render.titler/" />
-    <link rel="prev" title="sequencer" href="../geometor.render.sequencer/" />   
+    <link rel="next" title="geometor.render.titler" href="../geometor.render.titler/" />
+    <link rel="prev" title="geometor.render.sequencer" href="../geometor.render.sequencer/" />   
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -80,19 +78,17 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../mission/">mission</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../usage/">usage</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../">geometor.render</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../geometor.render.plotter/">plotter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../geometor.render.sequencer/">sequencer</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">styles</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#geometor.render.styles.get_styles"><code class="docutils literal notranslate"><span class="pre">get_styles()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../geometor.render.titler/">titler</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../geometor.render.chains/">chains</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../geometor.render.colors/">colors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../geometor.render.groups/">groups</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../geometor.render.sections/">sections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../geometor.render.utils/">utils</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../">modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../geometor.render/">geometor.render</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geometor.render.plotter/">geometor.render.plotter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geometor.render.sequencer/">geometor.render.sequencer</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">geometor.render.styles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geometor.render.titler/">geometor.render.titler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geometor.render.chains/">geometor.render.chains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geometor.render.groups/">geometor.render.groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geometor.render.sections/">geometor.render.sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geometor.render.colors/">geometor.render.colors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geometor.render.utils/">geometor.render.utils</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../demos/">demos</a></li>
@@ -116,27 +112,20 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../">geometor.render</a></li>
-      <li class="breadcrumb-item active">styles</li>
+          <li class="breadcrumb-item"><a href="../">modules</a></li>
+          <li class="breadcrumb-item"><a href="../geometor.render/">geometor.render</a></li>
+      <li class="breadcrumb-item active">geometor.render.styles</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/geometor/render/blob/main/docsrc/modules/geometor.render.styles.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
-  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="../geometor.render.sequencer/" class="btn btn-neutral float-left" title="sequencer" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../geometor.render.titler/" class="btn btn-neutral float-right" title="titler" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-  </div>
+  </ul>
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <section id="module-geometor.render.styles">
-<span id="styles"></span><h1>styles<a class="headerlink" href="#module-geometor.render.styles" title="Link to this heading"></a></h1>
+<span id="geometor-render-styles"></span><h1>geometor.render.styles<a class="headerlink" href="#module-geometor.render.styles" title="Link to this heading">¶</a></h1>
 <p>dictionary of style sets for matplotlib</p>
-<dl class="py function">
-<dt class="sig sig-object py" id="geometor.render.styles.get_styles">
-<span class="sig-prename descclassname"><span class="pre">geometor.render.styles.</span></span><span class="sig-name descname"><span class="pre">get_styles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#geometor.render.styles.get_styles" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
 </section>
 
 <div class="section">
@@ -146,8 +135,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../geometor.render.sequencer/" class="btn btn-neutral float-left" title="sequencer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../geometor.render.titler/" class="btn btn-neutral float-right" title="titler" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../geometor.render.sequencer/" class="btn btn-neutral float-left" title="geometor.render.sequencer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../geometor.render.titler/" class="btn btn-neutral float-right" title="geometor.render.titler" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
