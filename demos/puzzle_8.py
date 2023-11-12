@@ -31,21 +31,13 @@ def run():
 
     model.construct_circle_by_labels('Y', 'G')
 
-    model.set_polygon_by_labels(['B', 'U', 'HH'])
+    triangle = model.set_polygon_by_labels(['B', 'U', 'HH'])
     
+    print(triangle.area)
 
-    #  report_summary(model)
-    #  report_group_by_type(model)
-    #  report_sequence(model)
 
-    #  model.save('vesica.json')
-
-    #  m2 = model.load("vesica.json")
-    #  report_sequence(m2)
-    #  print(m2)
-
-    plotter = Plotter(model, FIG_W=9, FIG_H=9, margin=.01)
-    plotter.plot_model()
+    plotter = Plotter(model.name, FIG_W=9, FIG_H=9)
+    plotter.plot_model(model)
 
     plt.show()
 
