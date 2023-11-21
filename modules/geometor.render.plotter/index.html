@@ -20,6 +20,7 @@
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../about/" />
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
     <link rel="next" title="geometor.render.sequencer" href="../geometor.render.sequencer/" />
@@ -80,6 +81,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../mission/">mission</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/">overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../usage/">usage</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">modules</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../geometor.render/">geometor.render</a></li>
@@ -124,11 +126,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../geometor.render.utils/">geometor.render.utils</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../logs/">logs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../demos/">demos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../refs/">references</a></li>
-<li class="toctree-l1"><a class="reference external" href="/log#https://">log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../discuss/">discuss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/">contribute</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../todos/">todos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary/">glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/">about</a></li>
 </ul>
 
         </div>
@@ -146,7 +151,6 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../">modules</a></li>
-          <li class="breadcrumb-item"><a href="../geometor.render/">geometor.render</a></li>
       <li class="breadcrumb-item active">geometor.render.plotter</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/geometor/render/blob/main/docsrc/modules/geometor.render.plotter.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -179,10 +183,10 @@
 <li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">margin</span></code> -&gt; <a class="reference external" href="https://docs.python.org/3.9/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>: margin for the plot</p></li>
 <li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">FIG_W</span></code> -&gt; <a class="reference external" href="https://docs.python.org/3.9/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>: width of the figure</p></li>
 <li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">FIG_H</span></code> -&gt; <a class="reference external" href="https://docs.python.org/3.9/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>: height of the figure</p></li>
-<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ax_main</span></code> -&gt; <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></a>: Axes for the main graph</p></li>
-<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ax_header</span></code> -&gt; <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></a>: Axes for the header panel</p></li>
-<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ax_footer</span></code> -&gt; <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></a>: Axes for the footer panel</p></li>
-<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">figure</span></code> -&gt; <a class="reference external" href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure" title="(in Matplotlib v3.8.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.figure.Figure</span></code></a>: the main figure of the plot</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ax_main</span></code> -&gt; <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></a>: Axes for the main graph</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ax_header</span></code> -&gt; <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></a>: Axes for the header panel</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ax_footer</span></code> -&gt; <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></a>: Axes for the footer panel</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">figure</span></code> -&gt; <a class="reference external" href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure" title="(in Matplotlib v3.8.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.figure.Figure</span></code></a>: the main figure of the plot</p></li>
 </ul>
 </section>
 <section id="methods">
