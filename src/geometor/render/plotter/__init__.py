@@ -90,6 +90,9 @@ class Plotter:
 
         self.plot_elements = []
 
+    def add_styles(self, styles: dict):
+        add_styles(styles)
+
     def reset_ax_all(self) -> None:
         self.reset_ax_main()
         self.reset_ax_header()

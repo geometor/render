@@ -1,6 +1,7 @@
 """
 dictionary of style sets for matplotlib
 """
+
 from ._default import _default
 from ._red import _red
 from ._green import _green
@@ -8,10 +9,13 @@ from ._blue import _blue
 from .z_levels import *
 
 STYLES = {}
-STYLES['default'] = _default
-STYLES['red'] = _red
-STYLES['green'] = _green
-STYLES['blue'] = _blue
+STYLES["default"] = _default
+STYLES["red"] = _red
+STYLES["green"] = _green
+STYLES["blue"] = _blue
+
+def add_styles(styles_dict):
+    STYLES.update(styles_dict)
 
 def get_styles(element_type, classes: list = None):
     styles = STYLES["default"].get(element_type).copy()
@@ -22,6 +26,49 @@ def get_styles(element_type, classes: list = None):
                 styles.update(STYLES[class_name].get(element_type).copy())
 
     return styles
+
+#  point_inner_color = "w"
+#  point_outer_color = "k"
+#  point_selected_color = "y"
+#  point_highlight_color = "w"
+#  STYLES["0"] = {
+    #  "point_inner": {
+        #  "color": point_inner_color,
+        #  "linestyle": "",
+        #  "marker": ".",
+        #  "markersize": 2,
+        #  "zorder": Z_POINT_INNER,
+    #  },
+    #  "point_outer": {
+        #  "color": "k",
+        #  "linestyle": "",
+        #  "marker": ".",
+        #  "markersize": 8,
+        #  "zorder": Z_POINT_OUTER,
+    #  },
+    #  "point_selected": {
+        #  #  "color": point_selected_color,
+        #  #  "linestyle": "",
+        #  #  "fillstyle": "none",
+        #  #  "marker": "o",
+        #  #  "markersize": 40,
+        #  #  "markeredgecolor": "y",
+        #  #  "markeredgewidth": 2,
+        #  #  "zorder": Z_SELECTED,
+    #  },
+    #  "point_highlight": {
+        #  "color": "r",
+        #  "linestyle": "",
+        #  "marker": "o",
+        #  "markersize": 30,
+        #  "markeredgecolor": "r",
+        #  "markeredgewidth": 10,
+        #  "zorder": Z_POINT_HILITE,
+    #  },
+#  }
+
+
+
 
 #  STYLES['given'] = {'color':'#FFF6', 'markersize':7, 'marker':'o'}
 
@@ -55,5 +102,3 @@ def get_styles(element_type, classes: list = None):
 #  STYLES['cyan'] = {'color':'#0FF3', 'linestyle':'-'}
 #  STYLES['cyanpt'] = {'color':'#C90', 'markersize':8, 'marker':'o'}
 #  STYLES['magenta'] = {'color':'#F0F3', 'linestyle':'-'}
-
-

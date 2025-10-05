@@ -9,8 +9,6 @@ recent logs
 .. postlist:: 5
    :excerpts:
 
-contents
---------
 
 .. toctree::
    :hidden:
