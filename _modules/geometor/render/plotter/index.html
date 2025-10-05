@@ -1,23 +1,22 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../../">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>geometor.render.plotter &mdash; GEOMETOR • render</title>
-      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../https://geometor.github.io/model/_static/css/rtd-dark.css" type="text/css" />
-    <link rel="canonical" href="https://geometor.github.io/render/_modules/geometor/render/plotter.html" />
-  <!--[if lt IE 9]>
-    <script src="../../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=ea5fcf70" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
+
   
-        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../../../_static/documentation_options.js?v=187304be"></script>
-        <script src="../../../../_static/doctools.js?v=888ff710"></script>
-        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="canonical" href="https://geometor.github.io/render/_modules/geometor/render/plotter/" />
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=187304be"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="author" title="About these documents" href="../../../../about/" />
     <link rel="index" title="Index" href="../../../../genindex/" />
@@ -117,31 +116,31 @@
            <div itemprop="articleBody">
               <h1>Source code for geometor.render.plotter</h1><div class="highlight"><pre>
 <span></span>
-<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
 
-<span class="kn">from</span> <span class="nn">..common</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">..styles</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..common</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..styles</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
-<span class="kn">from</span> <span class="nn">._points</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">._points</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">_plot_point</span><span class="p">,</span>
     <span class="n">_plot_selected_points</span><span class="p">,</span>
     <span class="n">_plot_circle_points</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="kn">from</span> <span class="nn">._lines</span> <span class="kn">import</span> <span class="n">_plot_line</span><span class="p">,</span> <span class="n">_plot_selected_line</span>
-<span class="kn">from</span> <span class="nn">._circles</span> <span class="kn">import</span> <span class="n">_plot_circle</span><span class="p">,</span> <span class="n">_plot_selected_circle</span>
-<span class="kn">from</span> <span class="nn">._segments</span> <span class="kn">import</span> <span class="n">_plot_segment</span><span class="p">,</span> <span class="n">_plot_line_segment</span><span class="p">,</span> <span class="n">_plot_circle_radius</span>
-<span class="kn">from</span> <span class="nn">._polygons</span> <span class="kn">import</span> <span class="n">_plot_polygon</span>
-<span class="kn">from</span> <span class="nn">._wedges</span> <span class="kn">import</span> <span class="n">_plot_wedge</span><span class="p">,</span> <span class="n">Wedge</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">._lines</span><span class="w"> </span><span class="kn">import</span> <span class="n">_plot_line</span><span class="p">,</span> <span class="n">_plot_selected_line</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">._circles</span><span class="w"> </span><span class="kn">import</span> <span class="n">_plot_circle</span><span class="p">,</span> <span class="n">_plot_selected_circle</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">._segments</span><span class="w"> </span><span class="kn">import</span> <span class="n">_plot_segment</span><span class="p">,</span> <span class="n">_plot_line_segment</span><span class="p">,</span> <span class="n">_plot_circle_radius</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">._polygons</span><span class="w"> </span><span class="kn">import</span> <span class="n">_plot_polygon</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">._wedges</span><span class="w"> </span><span class="kn">import</span> <span class="n">_plot_wedge</span><span class="p">,</span> <span class="n">Wedge</span>
 
-<span class="kn">from</span> <span class="nn">._elements</span> <span class="kn">import</span> <span class="n">_plot_element</span><span class="p">,</span> <span class="n">PlotElement</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">._elements</span><span class="w"> </span><span class="kn">import</span> <span class="n">_plot_element</span><span class="p">,</span> <span class="n">PlotElement</span>
 
-<span class="kn">from</span> <span class="nn">geometor.model</span> <span class="kn">import</span> <span class="n">Model</span>
-<span class="kn">from</span> <span class="nn">geometor.render.utils</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geometor.model</span><span class="w"> </span><span class="kn">import</span> <span class="n">Model</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geometor.render.utils</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 
 <div class="viewcode-block" id="Plotter">
 <a class="viewcode-back" href="../../../../modules/geometor.render.plotter/#geometor.render.plotter.Plotter">[docs]</a>
-<span class="k">class</span> <span class="nc">Plotter</span><span class="p">:</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Plotter</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    The Plotter class handles the fundametals for rendering a geometric construction</span>
 
@@ -167,7 +166,7 @@
 <span class="sd">    - :meth:`plot_circle` -&gt; :class:`Circle &lt;sympy.geometry.ellipse.Circle&gt;`</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">plot_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">margin_ratio</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
@@ -210,9 +209,15 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">plot_elements</span> <span class="o">=</span> <span class="p">[]</span>
 
+<div class="viewcode-block" id="Plotter.add_styles">
+<a class="viewcode-back" href="../../../../modules/geometor.render.plotter/#geometor.render.plotter.Plotter.add_styles">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_styles</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">styles</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="n">add_styles</span><span class="p">(</span><span class="n">styles</span><span class="p">)</span></div>
+
+
 <div class="viewcode-block" id="Plotter.reset_ax_all">
 <a class="viewcode-back" href="../../../../modules/geometor.render.plotter/#geometor.render.plotter.Plotter.reset_ax_all">[docs]</a>
-    <span class="k">def</span> <span class="nf">reset_ax_all</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reset_ax_all</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reset_ax_main</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reset_ax_header</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reset_ax_footer</span><span class="p">()</span></div>
@@ -220,7 +225,7 @@
 
 <div class="viewcode-block" id="Plotter.reset_ax_main">
 <a class="viewcode-back" href="../../../../modules/geometor.render.plotter/#geometor.render.plotter.Plotter.reset_ax_main">[docs]</a>
-    <span class="k">def</span> <span class="nf">reset_ax_main</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reset_ax_main</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ax_main</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ax_main</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ax_main</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s2">&quot;equal&quot;</span><span class="p">)</span></div>
@@ -228,21 +233,21 @@
 
 <div class="viewcode-block" id="Plotter.reset_ax_header">
 <a class="viewcode-back" href="../../../../modules/geometor.render.plotter/#geometor.render.plotter.Plotter.reset_ax_header">[docs]</a>
-    <span class="k">def</span> <span class="nf">reset_ax_header</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reset_ax_header</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ax_header</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ax_header</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="Plotter.reset_ax_footer">
 <a class="viewcode-back" href="../../../../modules/geometor.render.plotter/#geometor.render.plotter.Plotter.reset_ax_footer">[docs]</a>
-    <span class="k">def</span> <span class="nf">reset_ax_footer</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reset_ax_footer</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ax_footer</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ax_footer</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="Plotter.set_ax_main_bounds">
 <a class="viewcode-back" href="../../../../modules/geometor.render.plotter/#geometor.render.plotter.Plotter.set_ax_main_bounds">[docs]</a>
-    <span class="k">def</span> <span class="nf">set_ax_main_bounds</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bounds</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_ax_main_bounds</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bounds</span><span class="p">):</span>
         <span class="n">vmin</span> <span class="o">=</span> <span class="n">bounds</span><span class="o">.</span><span class="n">vertices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">vmax</span> <span class="o">=</span> <span class="n">bounds</span><span class="o">.</span><span class="n">vertices</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
 
@@ -254,7 +259,7 @@
 
 <div class="viewcode-block" id="Plotter.annotate_point">
 <a class="viewcode-back" href="../../../../modules/geometor.render.plotter/#geometor.render.plotter.Plotter.annotate_point">[docs]</a>
-    <span class="k">def</span> <span class="nf">annotate_point</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="n">spg</span><span class="o">.</span><span class="n">Point</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">annotate_point</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="n">spg</span><span class="o">.</span><span class="n">Point</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Annotate the given point with the provided text on the given axes.&quot;&quot;&quot;</span>
         <span class="n">x</span> <span class="o">=</span> <span class="n">point</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">evalf</span><span class="p">()</span>
         <span class="n">y</span> <span class="o">=</span> <span class="n">point</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">evalf</span><span class="p">()</span>
@@ -288,7 +293,7 @@
 
 <div class="viewcode-block" id="Plotter.plot_model">
 <a class="viewcode-back" href="../../../../modules/geometor.render.plotter/#geometor.render.plotter.Plotter.plot_model">[docs]</a>
-    <span class="k">def</span> <span class="nf">plot_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Model</span><span class="p">,</span> <span class="n">annotate_points</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">plot_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Model</span><span class="p">,</span> <span class="n">annotate_points</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="n">x_limits</span><span class="p">,</span> <span class="n">y_limits</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">limits</span><span class="p">()</span>
         <span class="n">x_limits</span><span class="p">,</span> <span class="n">y_limits</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_add_margin_to_ax_main_limits</span><span class="p">(</span><span class="n">x_limits</span><span class="p">,</span> <span class="n">y_limits</span><span class="p">)</span>
         <span class="n">x_limits</span><span class="p">,</span> <span class="n">y_limits</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pad_ax_main_limits_for_aspect_ratio</span><span class="p">(</span>
@@ -332,7 +337,7 @@
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">el</span><span class="p">,</span> <span class="n">Wedge</span><span class="p">):</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">plot_wedge</span><span class="p">(</span><span class="n">el</span><span class="p">,</span> <span class="n">details</span><span class="o">.</span><span class="n">classes</span><span class="p">)</span>
 
-        <span class="k">def</span> <span class="nf">_on_add</span><span class="p">(</span><span class="n">sel</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">_on_add</span><span class="p">(</span><span class="n">sel</span><span class="p">):</span>
             <span class="n">details</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cursor_points</span><span class="p">[</span><span class="n">sel</span><span class="o">.</span><span class="n">artist</span><span class="p">]</span>
 
             <span class="n">xval</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">details</span><span class="o">.</span><span class="n">pt</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
@@ -351,7 +356,7 @@
 
 <div class="viewcode-block" id="Plotter.plot_header">
 <a class="viewcode-back" href="../../../../modules/geometor.render.plotter/#geometor.render.plotter.Plotter.plot_header">[docs]</a>
-    <span class="k">def</span> <span class="nf">plot_header</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">plot_header</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        sets up one panel for header</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -370,7 +375,7 @@
 
 <div class="viewcode-block" id="Plotter.plot_footer">
 <a class="viewcode-back" href="../../../../modules/geometor.render.plotter/#geometor.render.plotter.Plotter.plot_footer">[docs]</a>
-    <span class="k">def</span> <span class="nf">plot_footer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">plot_footer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        sets up 3 panels in footer for index, description and label</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -402,7 +407,7 @@
         <span class="k">return</span> <span class="p">[</span><span class="n">index_artist</span><span class="p">,</span> <span class="n">description_artist</span><span class="p">,</span> <span class="n">label_artist</span><span class="p">]</span></div>
 
 
-    <span class="k">def</span> <span class="nf">_add_margin_to_ax_main_limits</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_add_margin_to_ax_main_limits</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">x_limits</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">y_limits</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">default_margin</span><span class="o">=</span><span class="mf">0.5</span>
     <span class="p">):</span>
         <span class="n">x_range</span> <span class="o">=</span> <span class="n">x_limits</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">x_limits</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -430,7 +435,7 @@
 
         <span class="k">return</span> <span class="n">x_limits</span><span class="p">,</span> <span class="n">y_limits</span>
 
-    <span class="k">def</span> <span class="nf">_pad_ax_main_limits_for_aspect_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_limits</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">y_limits</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_pad_ax_main_limits_for_aspect_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_limits</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">y_limits</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
         <span class="n">current_width</span> <span class="o">=</span> <span class="n">x_limits</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">x_limits</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">current_height</span> <span class="o">=</span> <span class="n">y_limits</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">y_limits</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
@@ -454,7 +459,7 @@
 
 <div class="viewcode-block" id="Plotter.set_plotter_limits_from_points">
 <a class="viewcode-back" href="../../../../modules/geometor.render.plotter/#geometor.render.plotter.Plotter.set_plotter_limits_from_points">[docs]</a>
-    <span class="k">def</span> <span class="nf">set_plotter_limits_from_points</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_plotter_limits_from_points</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="p">):</span>
         <span class="c1"># TODO: this should not change the self.bounds - especially if used for zoom</span>
         <span class="n">x_limits</span><span class="p">,</span> <span class="n">y_limits</span> <span class="o">=</span> <span class="n">get_limits_from_points</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
         <span class="n">x_limits</span><span class="p">,</span> <span class="n">y_limits</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_add_margin_to_ax_main_limits</span><span class="p">(</span><span class="n">x_limits</span><span class="p">,</span> <span class="n">y_limits</span><span class="p">)</span>
@@ -474,7 +479,7 @@
 
 <div class="viewcode-block" id="Plotter.zoom_to_points">
 <a class="viewcode-back" href="../../../../modules/geometor.render.plotter/#geometor.render.plotter.Plotter.zoom_to_points">[docs]</a>
-    <span class="k">def</span> <span class="nf">zoom_to_points</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">zoom_pts</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">zoom_to_points</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">zoom_pts</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">zoom_pts</span><span class="p">:</span>
             <span class="n">x_limits</span><span class="p">,</span> <span class="n">y_limits</span> <span class="o">=</span> <span class="n">get_limits_from_points</span><span class="p">(</span><span class="n">zoom_pts</span><span class="p">)</span>
             <span class="n">x_limits</span><span class="p">,</span> <span class="n">y_limits</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_add_margin_to_ax_main_limits</span><span class="p">(</span><span class="n">x_limits</span><span class="p">,</span> <span class="n">y_limits</span><span class="p">)</span>
@@ -488,7 +493,7 @@
 
 <div class="viewcode-block" id="Plotter.zoom_to_bounds">
 <a class="viewcode-back" href="../../../../modules/geometor.render.plotter/#geometor.render.plotter.Plotter.zoom_to_bounds">[docs]</a>
-    <span class="k">def</span> <span class="nf">zoom_to_bounds</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">zoom_to_bounds</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">set_ax_main_bounds</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bounds</span><span class="p">)</span></div>
 </div>
 
@@ -506,7 +511,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, GEOMETOR.</p>
+    <p>&#169; Copyright 2025, GEOMETOR.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

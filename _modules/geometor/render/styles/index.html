@@ -1,23 +1,22 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../../">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>geometor.render.styles &mdash; GEOMETOR • render</title>
-      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../https://geometor.github.io/model/_static/css/rtd-dark.css" type="text/css" />
-    <link rel="canonical" href="https://geometor.github.io/render/_modules/geometor/render/styles.html" />
-  <!--[if lt IE 9]>
-    <script src="../../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=ea5fcf70" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
+
   
-        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../../../_static/documentation_options.js?v=187304be"></script>
-        <script src="../../../../_static/doctools.js?v=888ff710"></script>
-        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="canonical" href="https://geometor.github.io/render/_modules/geometor/render/styles/" />
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=187304be"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="author" title="About these documents" href="../../../../about/" />
     <link rel="index" title="Index" href="../../../../genindex/" />
@@ -119,21 +118,28 @@
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">dictionary of style sets for matplotlib</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">from</span> <span class="nn">._default</span> <span class="kn">import</span> <span class="n">_default</span>
-<span class="kn">from</span> <span class="nn">._red</span> <span class="kn">import</span> <span class="n">_red</span>
-<span class="kn">from</span> <span class="nn">._green</span> <span class="kn">import</span> <span class="n">_green</span>
-<span class="kn">from</span> <span class="nn">._blue</span> <span class="kn">import</span> <span class="n">_blue</span>
-<span class="kn">from</span> <span class="nn">.z_levels</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">._default</span><span class="w"> </span><span class="kn">import</span> <span class="n">_default</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">._red</span><span class="w"> </span><span class="kn">import</span> <span class="n">_red</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">._green</span><span class="w"> </span><span class="kn">import</span> <span class="n">_green</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">._blue</span><span class="w"> </span><span class="kn">import</span> <span class="n">_blue</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.z_levels</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">STYLES</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">STYLES</span><span class="p">[</span><span class="s1">&#39;default&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_default</span>
-<span class="n">STYLES</span><span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_red</span>
-<span class="n">STYLES</span><span class="p">[</span><span class="s1">&#39;green&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_green</span>
-<span class="n">STYLES</span><span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_blue</span>
+<span class="n">STYLES</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_default</span>
+<span class="n">STYLES</span><span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_red</span>
+<span class="n">STYLES</span><span class="p">[</span><span class="s2">&quot;green&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_green</span>
+<span class="n">STYLES</span><span class="p">[</span><span class="s2">&quot;blue&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_blue</span>
+
+<div class="viewcode-block" id="add_styles">
+<a class="viewcode-back" href="../../../../modules/geometor.render.styles/#geometor.render.styles.add_styles">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">add_styles</span><span class="p">(</span><span class="n">styles_dict</span><span class="p">):</span>
+    <span class="n">STYLES</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">styles_dict</span><span class="p">)</span></div>
+
 
 <div class="viewcode-block" id="get_styles">
 <a class="viewcode-back" href="../../../../modules/geometor.render.styles/#geometor.render.styles.get_styles">[docs]</a>
-<span class="k">def</span> <span class="nf">get_styles</span><span class="p">(</span><span class="n">element_type</span><span class="p">,</span> <span class="n">classes</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_styles</span><span class="p">(</span><span class="n">element_type</span><span class="p">,</span> <span class="n">classes</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
     <span class="n">styles</span> <span class="o">=</span> <span class="n">STYLES</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">element_type</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
     <span class="c1"># override default with classes</span>
     <span class="k">if</span> <span class="n">classes</span><span class="p">:</span>
@@ -142,6 +148,49 @@
                 <span class="n">styles</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">STYLES</span><span class="p">[</span><span class="n">class_name</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">element_type</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
 
     <span class="k">return</span> <span class="n">styles</span></div>
+
+
+<span class="c1">#  point_inner_color = &quot;w&quot;</span>
+<span class="c1">#  point_outer_color = &quot;k&quot;</span>
+<span class="c1">#  point_selected_color = &quot;y&quot;</span>
+<span class="c1">#  point_highlight_color = &quot;w&quot;</span>
+<span class="c1">#  STYLES[&quot;0&quot;] = {</span>
+    <span class="c1">#  &quot;point_inner&quot;: {</span>
+        <span class="c1">#  &quot;color&quot;: point_inner_color,</span>
+        <span class="c1">#  &quot;linestyle&quot;: &quot;&quot;,</span>
+        <span class="c1">#  &quot;marker&quot;: &quot;.&quot;,</span>
+        <span class="c1">#  &quot;markersize&quot;: 2,</span>
+        <span class="c1">#  &quot;zorder&quot;: Z_POINT_INNER,</span>
+    <span class="c1">#  },</span>
+    <span class="c1">#  &quot;point_outer&quot;: {</span>
+        <span class="c1">#  &quot;color&quot;: &quot;k&quot;,</span>
+        <span class="c1">#  &quot;linestyle&quot;: &quot;&quot;,</span>
+        <span class="c1">#  &quot;marker&quot;: &quot;.&quot;,</span>
+        <span class="c1">#  &quot;markersize&quot;: 8,</span>
+        <span class="c1">#  &quot;zorder&quot;: Z_POINT_OUTER,</span>
+    <span class="c1">#  },</span>
+    <span class="c1">#  &quot;point_selected&quot;: {</span>
+        <span class="c1">#  #  &quot;color&quot;: point_selected_color,</span>
+        <span class="c1">#  #  &quot;linestyle&quot;: &quot;&quot;,</span>
+        <span class="c1">#  #  &quot;fillstyle&quot;: &quot;none&quot;,</span>
+        <span class="c1">#  #  &quot;marker&quot;: &quot;o&quot;,</span>
+        <span class="c1">#  #  &quot;markersize&quot;: 40,</span>
+        <span class="c1">#  #  &quot;markeredgecolor&quot;: &quot;y&quot;,</span>
+        <span class="c1">#  #  &quot;markeredgewidth&quot;: 2,</span>
+        <span class="c1">#  #  &quot;zorder&quot;: Z_SELECTED,</span>
+    <span class="c1">#  },</span>
+    <span class="c1">#  &quot;point_highlight&quot;: {</span>
+        <span class="c1">#  &quot;color&quot;: &quot;r&quot;,</span>
+        <span class="c1">#  &quot;linestyle&quot;: &quot;&quot;,</span>
+        <span class="c1">#  &quot;marker&quot;: &quot;o&quot;,</span>
+        <span class="c1">#  &quot;markersize&quot;: 30,</span>
+        <span class="c1">#  &quot;markeredgecolor&quot;: &quot;r&quot;,</span>
+        <span class="c1">#  &quot;markeredgewidth&quot;: 10,</span>
+        <span class="c1">#  &quot;zorder&quot;: Z_POINT_HILITE,</span>
+    <span class="c1">#  },</span>
+<span class="c1">#  }</span>
+
+
 
 
 <span class="c1">#  STYLES[&#39;given&#39;] = {&#39;color&#39;:&#39;#FFF6&#39;, &#39;markersize&#39;:7, &#39;marker&#39;:&#39;o&#39;}</span>
@@ -176,8 +225,6 @@
 <span class="c1">#  STYLES[&#39;cyan&#39;] = {&#39;color&#39;:&#39;#0FF3&#39;, &#39;linestyle&#39;:&#39;-&#39;}</span>
 <span class="c1">#  STYLES[&#39;cyanpt&#39;] = {&#39;color&#39;:&#39;#C90&#39;, &#39;markersize&#39;:8, &#39;marker&#39;:&#39;o&#39;}</span>
 <span class="c1">#  STYLES[&#39;magenta&#39;] = {&#39;color&#39;:&#39;#F0F3&#39;, &#39;linestyle&#39;:&#39;-&#39;}</span>
-
-
 </pre></div>
 <div class="section">
    
@@ -190,7 +237,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, GEOMETOR.</p>
+    <p>&#169; Copyright 2025, GEOMETOR.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

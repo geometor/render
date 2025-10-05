@@ -1,23 +1,22 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../../">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>geometor.render.utils &mdash; GEOMETOR • render</title>
-      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
-      <link rel="stylesheet" href="../../../../https://geometor.github.io/model/_static/css/rtd-dark.css" type="text/css" />
-    <link rel="canonical" href="https://geometor.github.io/render/_modules/geometor/render/utils.html" />
-  <!--[if lt IE 9]>
-    <script src="../../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=ea5fcf70" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
+
   
-        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../../../_static/documentation_options.js?v=187304be"></script>
-        <script src="../../../../_static/doctools.js?v=888ff710"></script>
-        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="canonical" href="https://geometor.github.io/render/_modules/geometor/render/utils/" />
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=187304be"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="author" title="About these documents" href="../../../../about/" />
     <link rel="index" title="Index" href="../../../../genindex/" />
@@ -120,12 +119,12 @@
 <span class="sd">functions to plot utils</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="kn">from</span> <span class="nn">.common</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.common</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 
 <div class="viewcode-block" id="set_bounds">
 <a class="viewcode-back" href="../../../../modules/geometor.render.utils/#geometor.render.utils.set_bounds">[docs]</a>
-<span class="k">def</span> <span class="nf">set_bounds</span><span class="p">(</span><span class="n">limx</span><span class="p">,</span> <span class="n">limy</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">sp</span><span class="o">.</span><span class="n">Polygon</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">set_bounds</span><span class="p">(</span><span class="n">limx</span><span class="p">,</span> <span class="n">limy</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">sp</span><span class="o">.</span><span class="n">Polygon</span><span class="p">:</span>
     <span class="k">return</span> <span class="n">sp</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span>
         <span class="n">spg</span><span class="o">.</span><span class="n">Point</span><span class="p">(</span><span class="n">limx</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">limy</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
         <span class="n">spg</span><span class="o">.</span><span class="n">Point</span><span class="p">(</span><span class="n">limx</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">limy</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
@@ -137,8 +136,8 @@
 
 <div class="viewcode-block" id="snapshot">
 <a class="viewcode-back" href="../../../../modules/geometor.render.utils/#geometor.render.utils.snapshot">[docs]</a>
-<span class="k">def</span> <span class="nf">snapshot</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
-    <span class="kn">import</span> <span class="nn">os</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">snapshot</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
     <span class="n">sessions</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/Sessions&#39;</span>
     <span class="n">out</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">sessions</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">folder</span><span class="si">}</span><span class="s1">/&#39;</span>
     <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -151,8 +150,8 @@
 
 <div class="viewcode-block" id="snapshot_2">
 <a class="viewcode-back" href="../../../../modules/geometor.render.utils/#geometor.render.utils.snapshot_2">[docs]</a>
-<span class="k">def</span> <span class="nf">snapshot_2</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">transparent</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="kn">import</span> <span class="nn">os</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">snapshot_2</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">transparent</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
     <span class="n">folder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">folder</span><span class="p">)</span>
     <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
@@ -164,8 +163,8 @@
 
 <div class="viewcode-block" id="display">
 <a class="viewcode-back" href="../../../../modules/geometor.render.utils/#geometor.render.utils.display">[docs]</a>
-<span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-    <span class="kn">from</span> <span class="nn">IPython</span> <span class="kn">import</span> <span class="n">display</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">display</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">IPython</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span>
     <span class="n">display</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span></div>
 
 
@@ -193,7 +192,7 @@
 
 <div class="viewcode-block" id="adjust_ratio">
 <a class="viewcode-back" href="../../../../modules/geometor.render.utils/#geometor.render.utils.adjust_ratio">[docs]</a>
-<span class="k">def</span> <span class="nf">adjust_ratio</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">ratio</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">adjust_ratio</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">ratio</span><span class="p">):</span>
     <span class="c1"># TODO: account for header and footer</span>
     <span class="k">if</span> <span class="n">w</span> <span class="o">/</span> <span class="n">h</span> <span class="o">&lt;</span> <span class="n">ratio</span><span class="p">:</span>
         <span class="n">w</span> <span class="o">=</span> <span class="n">ratio</span> <span class="o">*</span> <span class="n">h</span>
@@ -204,7 +203,7 @@
 
 <div class="viewcode-block" id="adjust_lims">
 <a class="viewcode-back" href="../../../../modules/geometor.render.utils/#geometor.render.utils.adjust_lims">[docs]</a>
-<span class="k">def</span> <span class="nf">adjust_lims</span><span class="p">(</span><span class="n">limx</span><span class="p">,</span> <span class="n">limy</span><span class="p">,</span> <span class="n">margin_ratio</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">adjust_lims</span><span class="p">(</span><span class="n">limx</span><span class="p">,</span> <span class="n">limy</span><span class="p">,</span> <span class="n">margin_ratio</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
     <span class="c1"># TODO: adjust ratio for header footer</span>
     <span class="n">w</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">limx</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">limx</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="n">w_margin</span> <span class="o">=</span> <span class="n">w</span> <span class="o">*</span> <span class="n">margin_ratio</span>
@@ -234,7 +233,7 @@
 
 <div class="viewcode-block" id="get_limits_from_points">
 <a class="viewcode-back" href="../../../../modules/geometor.render.utils/#geometor.render.utils.get_limits_from_points">[docs]</a>
-<span class="k">def</span> <span class="nf">get_limits_from_points</span><span class="p">(</span><span class="n">pts</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_limits_from_points</span><span class="p">(</span><span class="n">pts</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;find x, y limits from a set of points&#39;&#39;&#39;</span>
     <span class="n">limx</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
     <span class="n">limy</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
@@ -265,7 +264,7 @@
 <span class="c1"># more generalized plot setup</span>
 <div class="viewcode-block" id="ax_set_bounds">
 <a class="viewcode-back" href="../../../../modules/geometor.render.utils/#geometor.render.utils.ax_set_bounds">[docs]</a>
-<span class="k">def</span> <span class="nf">ax_set_bounds</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">bounds</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">ax_set_bounds</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">bounds</span><span class="p">):</span>
     <span class="n">vmin</span> <span class="o">=</span> <span class="n">bounds</span><span class="o">.</span><span class="n">vertices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">vmax</span> <span class="o">=</span> <span class="n">bounds</span><span class="o">.</span><span class="n">vertices</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">vmin</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">evalf</span><span class="p">()),</span> <span class="nb">float</span><span class="p">(</span><span class="n">vmax</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">evalf</span><span class="p">()))</span>
@@ -274,7 +273,7 @@
 
 <div class="viewcode-block" id="ax_set_spines">
 <a class="viewcode-back" href="../../../../modules/geometor.render.utils/#geometor.render.utils.ax_set_spines">[docs]</a>
-<span class="k">def</span> <span class="nf">ax_set_spines</span><span class="p">(</span><span class="n">ax</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">ax_set_spines</span><span class="p">(</span><span class="n">ax</span><span class="p">):</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;bottom&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
@@ -295,7 +294,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, GEOMETOR.</p>
+    <p>&#169; Copyright 2025, GEOMETOR.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

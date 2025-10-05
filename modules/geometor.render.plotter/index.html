@@ -1,24 +1,32 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="geometor.render.plotter" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="modules/geometor.render.plotter/" />
+<meta property="og:site_name" content="GEOMETOR • render" />
+<meta property="og:image:width" content="1146" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image" content="_images/social_previews/summary_modules_geometor.render.plotter_80149c69.png" />
+<meta property="og:image:alt" content="" />
+<meta name="twitter:card" content="summary_large_image" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>geometor.render.plotter &mdash; GEOMETOR • render</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
-      <link rel="stylesheet" href="../../https://geometor.github.io/model/_static/css/rtd-dark.css" type="text/css" />
-    <link rel="canonical" href="https://geometor.github.io/render/modules/geometor.render.plotter.html" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=ea5fcf70" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+
   
-        <script src="../../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../_static/documentation_options.js?v=187304be"></script>
-        <script src="../../_static/doctools.js?v=888ff710"></script>
-        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="canonical" href="https://geometor.github.io/render/modules/geometor.render.plotter/" />
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=187304be"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="author" title="About these documents" href="../../about/" />
     <link rel="index" title="Index" href="../../genindex/" />
@@ -87,6 +95,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../geometor.render/">geometor.render</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">geometor.render.plotter</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#geometor.render.plotter.Plotter"><code class="docutils literal notranslate"><span class="pre">Plotter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.add_styles"><code class="docutils literal notranslate"><span class="pre">Plotter.add_styles()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.reset_ax_all"><code class="docutils literal notranslate"><span class="pre">Plotter.reset_ax_all()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.reset_ax_main"><code class="docutils literal notranslate"><span class="pre">Plotter.reset_ax_main()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#geometor.render.plotter.Plotter.reset_ax_header"><code class="docutils literal notranslate"><span class="pre">Plotter.reset_ax_header()</span></code></a></li>
@@ -184,19 +193,24 @@
 <li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">margin</span></code> -&gt; <a class="reference external" href="https://docs.python.org/3.9/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>: margin for the plot</p></li>
 <li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">FIG_W</span></code> -&gt; <a class="reference external" href="https://docs.python.org/3.9/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>: width of the figure</p></li>
 <li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">FIG_H</span></code> -&gt; <a class="reference external" href="https://docs.python.org/3.9/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>: height of the figure</p></li>
-<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ax_main</span></code> -&gt; <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></a>: Axes for the main graph</p></li>
-<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ax_header</span></code> -&gt; <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></a>: Axes for the header panel</p></li>
-<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ax_footer</span></code> -&gt; <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></a>: Axes for the footer panel</p></li>
-<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">figure</span></code> -&gt; <a class="reference external" href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure" title="(in Matplotlib v3.8.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.figure.Figure</span></code></a>: the main figure of the plot</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ax_main</span></code> -&gt; <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.10.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></a>: Axes for the main graph</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ax_header</span></code> -&gt; <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.10.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></a>: Axes for the header panel</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">ax_footer</span></code> -&gt; <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.10.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code></a>: Axes for the footer panel</p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">figure</span></code> -&gt; <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="(in Matplotlib v3.10.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.figure.Figure</span></code></a>: the main figure of the plot</p></li>
 </ul>
 </section>
 <section id="methods">
 <h2>methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_point" title="geometor.render.plotter.Plotter.plot_point"><code class="xref py py-meth docutils literal notranslate"><span class="pre">plot_point()</span></code></a> -&gt; <a class="reference external" href="https://docs.sympy.org/latest/modules/geometry/points.html#sympy.geometry.point.Point" title="(in SymPy v1.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Point</span></code></a></p></li>
-<li><p><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_line" title="geometor.render.plotter.Plotter.plot_line"><code class="xref py py-meth docutils literal notranslate"><span class="pre">plot_line()</span></code></a> -&gt; <a class="reference external" href="https://docs.sympy.org/latest/modules/geometry/lines.html#sympy.geometry.line.Line" title="(in SymPy v1.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Line</span></code></a></p></li>
-<li><p><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_circle" title="geometor.render.plotter.Plotter.plot_circle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">plot_circle()</span></code></a> -&gt; <a class="reference external" href="https://docs.sympy.org/latest/modules/geometry/ellipses.html#sympy.geometry.ellipse.Circle" title="(in SymPy v1.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Circle</span></code></a></p></li>
+<li><p><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_point" title="geometor.render.plotter.Plotter.plot_point"><code class="xref py py-meth docutils literal notranslate"><span class="pre">plot_point()</span></code></a> -&gt; <a class="reference external" href="https://docs.sympy.org/latest/modules/geometry/points.html#sympy.geometry.point.Point" title="(in SymPy v1.14.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Point</span></code></a></p></li>
+<li><p><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_line" title="geometor.render.plotter.Plotter.plot_line"><code class="xref py py-meth docutils literal notranslate"><span class="pre">plot_line()</span></code></a> -&gt; <a class="reference external" href="https://docs.sympy.org/latest/modules/geometry/lines.html#sympy.geometry.line.Line" title="(in SymPy v1.14.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Line</span></code></a></p></li>
+<li><p><a class="reference internal" href="#geometor.render.plotter.Plotter.plot_circle" title="geometor.render.plotter.Plotter.plot_circle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">plot_circle()</span></code></a> -&gt; <a class="reference external" href="https://docs.sympy.org/latest/modules/geometry/ellipses.html#sympy.geometry.ellipse.Circle" title="(in SymPy v1.14.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Circle</span></code></a></p></li>
 </ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="geometor.render.plotter.Plotter.add_styles">
+<span class="sig-name descname"><span class="pre">add_styles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">styles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.9/library/stdtypes.html#dict" title="(in Python v3.9)"><span class="pre">dict</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/geometor/render/plotter/#Plotter.add_styles"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geometor.render.plotter.Plotter.add_styles" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="geometor.render.plotter.Plotter.reset_ax_all">
 <span class="sig-name descname"><span class="pre">reset_ax_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.9/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../../_modules/geometor/render/plotter/#Plotter.reset_ax_all"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geometor.render.plotter.Plotter.reset_ax_all" title="Link to this definition"></a></dt>
@@ -224,7 +238,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="geometor.render.plotter.Plotter.annotate_point">
-<span class="sig-name descname"><span class="pre">annotate_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.sympy.org/latest/modules/geometry/points.html#sympy.geometry.point.Point" title="(in SymPy v1.12)"><span class="pre">Point</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/geometor/render/plotter/#Plotter.annotate_point"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geometor.render.plotter.Plotter.annotate_point" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">annotate_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.sympy.org/latest/modules/geometry/points.html#sympy.geometry.point.Point" title="(in SymPy v1.14.0)"><span class="pre">Point</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/geometor/render/plotter/#Plotter.annotate_point"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geometor.render.plotter.Plotter.annotate_point" title="Link to this definition"></a></dt>
 <dd><p>Annotate the given point with the provided text on the given axes.</p>
 </dd></dl>
 
@@ -353,7 +367,7 @@ containing all the necessary matplotlib artifacts for rendering a geometric elem
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, GEOMETOR.</p>
+    <p>&#169; Copyright 2025, GEOMETOR.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
